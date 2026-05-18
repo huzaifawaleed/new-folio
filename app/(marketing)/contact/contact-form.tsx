@@ -29,12 +29,19 @@ export function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setError(null)
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          access_key: '1c13ff02-a2a4-4705-a68b-c6c26b360609',
+          subject: `New inquiry from ${data.name}${data.business ? ` — ${data.business}` : ''}`,
+          from_name: 'Portfolio Contact Form',
+          replyto: data.email,
+          ...data,
+        }),
       })
-      if (!res.ok) throw new Error('Failed to send')
+      const result = await res.json()
+      if (!result.success) throw new Error(result.message)
       setSubmitted(true)
       reset()
     } catch {

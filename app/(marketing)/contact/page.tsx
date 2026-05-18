@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Mail, MessageCircle, Briefcase, Code, MapPin, Clock } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
+import { GitHubIcon, LinkedInIcon, WhatsAppIcon, MailIcon } from '@/components/shared/social-icons'
 import { ContactForm } from './contact-form'
 import { GiantName } from '@/components/sections/giant-name'
 import { Reveal } from '@/components/shared/reveal'
@@ -14,28 +15,28 @@ export const metadata: Metadata = generateSeo({
 
 const socialLinks = [
   {
-    icon: MessageCircle,
+    Icon: WhatsAppIcon,
     label: 'WhatsApp',
     value: '+60 11-6419 6270',
     href: 'https://wa.me/60116419627',
     description: 'Fastest response',
   },
   {
-    icon: Mail,
+    Icon: MailIcon,
     label: 'Email',
     value: 'huzaifainaam225@gmail.com',
     href: 'mailto:huzaifainaam225@gmail.com',
     description: 'For detailed inquiries',
   },
   {
-    icon: Briefcase,
+    Icon: LinkedInIcon,
     label: 'LinkedIn',
     value: 'linkedin.com/in/huzaifa-waleed',
     href: 'https://linkedin.com/in/huzaifa-waleed',
     description: 'Professional profile',
   },
   {
-    icon: Code,
+    Icon: GitHubIcon,
     label: 'GitHub',
     value: 'github.com/huzaifawaleed',
     href: 'https://github.com/huzaifawaleed',
@@ -75,7 +76,7 @@ export default function ContactPage() {
                   Get in Touch
                 </p>
                 <div className="space-y-4">
-                  {socialLinks.map(({ icon: Icon, label, value, href, description }) => (
+                  {socialLinks.map(({ Icon, label, value, href, description }) => (
                     <a
                       key={label}
                       href={href}
