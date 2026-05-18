@@ -1,37 +1,32 @@
-import { UtensilsCrossed, Scissors, Stethoscope, Search, Smartphone } from 'lucide-react'
+import { Layout, Code2, ShoppingCart, Search, Smartphone } from 'lucide-react'
 import { Reveal } from '@/components/shared/reveal'
 import { SectionHeading } from '@/components/shared/section-heading'
 
 const services = [
   {
-    icon: UtensilsCrossed,
-    label: 'F&B Websites',
-    description: 'Digital menus, WhatsApp ordering, Google Maps',
-    price: 'From RM 500',
+    icon: Layout,
+    label: 'Landing Pages',
+    description: 'Fast, conversion-focused pages built to turn visitors into clients',
   },
   {
-    icon: Scissors,
-    label: 'Salon & Spa',
-    description: 'Gallery, bookings, Instagram feed, staff profiles',
-    price: 'From RM 600',
+    icon: Code2,
+    label: 'Full-Stack Apps',
+    description: 'End-to-end web applications with custom backends and APIs',
   },
   {
-    icon: Stethoscope,
-    label: 'Healthcare',
-    description: 'Doctor profiles, appointments, bilingual support',
-    price: 'From RM 700',
+    icon: ShoppingCart,
+    label: 'E-Commerce',
+    description: 'Online stores with payments, inventory, and seamless checkout',
   },
   {
     icon: Search,
-    label: 'SEO Basics',
-    description: 'Local SEO, fast load times, Google-ready markup',
-    price: 'Included',
+    label: 'SEO & Performance',
+    description: 'Core Web Vitals, structured data, and Google-ready optimization',
   },
   {
     icon: Smartphone,
-    label: 'Mobile-First',
-    description: 'Optimized for mobile users on any device, anywhere in the world',
-    price: 'Always',
+    label: 'Mobile-First Design',
+    description: 'Pixel-perfect responsive layouts that work on any screen size',
   },
 ]
 
@@ -42,7 +37,7 @@ export function ServicesRow() {
         <SectionHeading
           eyebrow="Services"
           heading="What I Build"
-          description="Specialized websites for businesses that need results fast — wherever you are."
+          description="From landing pages to full-stack apps — built clean, fast, and ready to scale."
         />
       </Reveal>
 
@@ -57,7 +52,6 @@ export function ServicesRow() {
                 </div>
                 <p className="font-semibold text-[#fafafa]">{service.label}</p>
                 <p className="mt-1.5 text-xs leading-relaxed text-[#71717a]">{service.description}</p>
-                <p className="mt-auto pt-4 text-xs font-semibold text-[#7c3aed]">{service.price}</p>
               </div>
             </Reveal>
           )

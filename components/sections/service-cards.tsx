@@ -1,67 +1,59 @@
 import Link from 'next/link'
-import { UtensilsCrossed, Scissors, Stethoscope, Briefcase, ArrowRight } from 'lucide-react'
+import { Layout, Code2, ShoppingCart, RefreshCw, ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/shared/reveal'
 import { SectionHeading } from '@/components/shared/section-heading'
 
 const services = [
   {
-    icon: UtensilsCrossed,
-    title: 'F&B Website',
-    price: 'From RM 500',
-    days: '7–8 days',
+    icon: Layout,
+    title: 'Landing Pages',
     color: '#c2410c',
     features: [
-      'Digital menu with photos',
-      'WhatsApp ordering button',
-      'Google Maps integration',
-      'Operating hours display',
-      'Grab/Foodpanda links',
-      'Mobile-optimized design',
+      'Single-page conversion design',
+      'Hero, features & CTA sections',
+      'Contact / lead capture form',
+      'SEO meta & Open Graph tags',
+      'Mobile-first responsive layout',
+      'Fast load — optimized assets',
     ],
   },
   {
-    icon: Scissors,
-    title: 'Salon & Spa Website',
-    price: 'From RM 600',
-    days: '7–8 days',
+    icon: Code2,
+    title: 'Full-Stack Web Apps',
     color: '#15803d',
     features: [
-      'Services pricing table',
-      'Before/after photo gallery',
-      'WhatsApp booking button',
-      'Staff profile cards',
-      'Instagram feed embed',
-      'Google Reviews section',
+      'Next.js App Router architecture',
+      'REST or tRPC API design',
+      'Database schema & migrations',
+      'Authentication & role management',
+      'Admin dashboard / CMS',
+      'Deployed on Vercel + cloud DB',
     ],
   },
   {
-    icon: Stethoscope,
-    title: 'Healthcare Website',
-    price: 'From RM 700',
-    days: '7–8 days',
+    icon: ShoppingCart,
+    title: 'E-Commerce Stores',
     color: '#1e3a8a',
     features: [
-      'Doctor profile pages',
-      'Services & conditions list',
-      'Appointment booking form',
-      'Location & directions',
-      'Insurance info panel',
-      'English & BM support',
+      'Product catalogue & categories',
+      'Secure payment integration',
+      'Cart, checkout & order flow',
+      'Inventory management panel',
+      'Email order confirmations',
+      'Mobile-optimized storefront',
     ],
   },
   {
-    icon: Briefcase,
-    title: 'Business Website',
-    price: 'From RM 800',
-    days: '7–8 days',
+    icon: RefreshCw,
+    title: 'Website Redesign',
     color: '#7c3aed',
     features: [
-      'Multi-page site structure',
-      'Services showcase',
-      'Team & about section',
-      'Contact form with email',
-      'SEO optimization',
-      'Performance optimized',
+      'Audit of existing site',
+      'Modern UI / UX overhaul',
+      'Performance & Core Web Vitals',
+      'SEO preservation & improvement',
+      'Content migration',
+      'Cross-browser QA testing',
     ],
   },
 ]
@@ -71,9 +63,9 @@ export function ServiceCards() {
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
       <Reveal>
         <SectionHeading
-          eyebrow="Pricing"
-          heading="Website Packages"
-          description="Transparent pricing, no hidden fees. Every package includes hosting setup, mobile optimization, and 30 days of post-launch support."
+          eyebrow="Services"
+          heading="What I Offer"
+          description="Every engagement is scoped around your goals — clean code, great design, and results you can measure."
           centered
         />
       </Reveal>
@@ -92,8 +84,6 @@ export function ServiceCards() {
                     <Icon size={18} style={{ color: svc.color }} />
                   </div>
                   <h3 className="font-bold text-[#fafafa]">{svc.title}</h3>
-                  <p className="mt-1 text-lg font-bold" style={{ color: svc.color }}>{svc.price}</p>
-                  <p className="text-xs text-[#71717a]">Delivered in {svc.days}</p>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
