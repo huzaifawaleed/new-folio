@@ -1,0 +1,51 @@
+@import "../styles/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #0a0a0f;
+    --foreground: #fafafa;
+    --card: #12121a;
+    --card-foreground: #fafafa;
+    --popover: #1a1a25;
+    --popover-foreground: #fafafa;
+    --primary: #7c3aed;
+    --primary-foreground: #fafafa;
+    --secondary: #1a1a25;
+    --secondary-foreground: #a1a1aa;
+    --muted: #1a1a25;
+    --muted-foreground: #71717a;
+    --accent: #7c3aed;
+    --accent-foreground: #fafafa;
+    --destructive: #ef4444;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #7c3aed;
+    --radius: 0.75rem;
+  }
+  * {
+    border-color: var(--border);
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
