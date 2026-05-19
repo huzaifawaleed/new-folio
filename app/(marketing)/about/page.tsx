@@ -48,25 +48,6 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <Reveal className="mt-8 flex flex-wrap gap-3">
-            {[
-              'HTML & CSS',
-              'JavaScript',
-              'PHP & MySQL',
-              'Bootstrap',
-              'WhatsApp API',
-              'Figma',
-              'Git & GitHub',
-              'SEO Basics',
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-[#27272a] bg-[#12121a] px-3 py-1.5 text-xs font-medium text-[#a1a1aa]"
-              >
-                {skill}
-              </span>
-            ))}
-          </Reveal>
         </div>
       </div>
 
