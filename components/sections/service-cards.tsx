@@ -65,9 +65,11 @@ export function ServiceCards() {
         <SectionHeading
           eyebrow="Services"
           heading="What I Offer"
-          description="Every engagement is scoped around your goals — clean code, great design, and results you can measure."
           centered
         />
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-[#a1a1aa]">
+          Every engagement is scoped around your goals — clean code, great design, and results you can measure.
+        </p>
       </Reveal>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
